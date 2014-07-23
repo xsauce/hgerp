@@ -1,0 +1,18 @@
+#head-title{
+	font-family: 华文细黑; 
+	font-size: 13mm; 
+	font-weight: normal; color: #FF0000;
+    text-align: center;
+}
+#login-container{
+	text-align:center;
+	width:100%;
+	padding-top:50px;
+	font-size:14px;
+}
+#submit-btn{
+	width:60px;
+}
+#error-msg{
+	color:red
+}

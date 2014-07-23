@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>登录</title>
+    <link rel="Stylesheet" type="text/css" href="{% static 'accounts/login.css' %}"/>
+</head>
+<body>
+    <h1 id="head-title">
+        宏钢信息系统·登录
+    </h1>
+    <hr />
+    <div id="login-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="user_name">账号:</label>
+            <input type="text" name="user_name" value="" id="user_name"/>
+            <label for="password">密码:</label>
+            <input type="password" name="password" value="" id="password"/>
+            <input type="submit" value="登录" id="submit-btn"/>
+            {% if err_msg %}
+            <p id="error-msg">{{err_msg}}</p>
+            {% endif %}
+        </form>
+    </div>
+<script type="text/javascript">
+document.getElementById('user_name').focus()
+</script>
+</body>
